@@ -1,0 +1,21 @@
+package Remove.Duplicates;
+
+import java.util.Arrays;
+
+public class StringWithNoDuplicates {
+
+	public static void main(String[] args) {
+		
+		String input = "aabbccdefsafa";	
+		removeDuplicates(input);
+		
+	}
+	
+	static void removeDuplicates(String input)
+	{
+		int initialCount = 1;
+		int noDup = 1;
+
+		
+	}
+}

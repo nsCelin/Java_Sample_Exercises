@@ -1,0 +1,36 @@
+package Remove.Duplicates;
+
+import java.util.Arrays;
+import java.util.LinkedHashSet;
+import java.util.Set;
+
+public class StringWithNoDuplicates {
+
+	public static void main(String[] args) {
+		
+		String input = "aabbccdefsafa";	
+		String removeDuplicates = removeDuplicates(input);
+		
+	}
+	
+	static String removeDuplicates(String input)
+	{
+		char[] chars = input.toCharArray();
+		Set<Character> charSet = new LinkedHashSet<Character>();
+		
+		for(char c : chars)
+		{
+			charSet.add(c);
+		}
+		
+		StringBuilder sb = new StringBuilder();
+		for(Character c : charSet) /*Iterating a Set*/
+		{
+			sb.append(c);
+		}
+		
+		return sb.toString();
+		
+	}
+	
+}

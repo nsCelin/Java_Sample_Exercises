@@ -1,0 +1,42 @@
+package Remove.Duplicates;
+
+import java.sql.Array;
+import java.util.ArrayList;
+import java.util.Arrays;
+import java.util.LinkedHashSet;
+import java.util.List;
+import java.util.Set;
+import java.util.stream.Collectors;
+import java.util.stream.Stream;
+
+public class StringWithNoDuplicates {
+
+	public static void main(String[] args) {
+		
+		String input = "aabbccdefsafa";	
+		char[] charArray = input.toCharArray();
+		
+		//List<Character> list = Arrays.asList(charArray); // this does not compile.
+		List<char[]> asList = Arrays.asList(chars); // because this DOES compile.
+		Set<Character> charSet = new LinkedHashSet<Character>(); 
+		//Convert the string to an array of char, and store it in a LinkedHashSet. That will preserve your ordering, and remove duplicates.
+		
+		for (char c : charArray)
+		{
+			charSet.add(c);
+		}
+		
+		//Arrays.asList(charArray).stream().distinct().map(str -> new StringBuilder(str_Array)).collect(Collectors.toList());
+		List<char[]> chars = Arrays.asList(charArray);
+		List<Character> listC = new ArrayList<Character>();
+	    for (char c : chars) {
+	        listC.add(c);
+	    }
+	    
+		List<Set<Character>> a = Arrays.asList(charSet).stream().distinct().collect(Collectors.toList());
+		String result = String.join(",", (CharSequence[]) a.toArray());
+		Arrays.asList(input).stream().map(str -> new StringBuilder(str).reverse().toString()).collect(Collectors.toList());
+		
+		
+	}
+}

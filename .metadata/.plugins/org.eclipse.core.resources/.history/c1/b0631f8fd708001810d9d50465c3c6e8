@@ -1,0 +1,38 @@
+package Remove.Duplicates;
+
+import java.sql.Array;
+import java.util.ArrayList;
+import java.util.Arrays;
+import java.util.LinkedHashSet;
+import java.util.List;
+import java.util.Set;
+import java.util.stream.Collectors;
+import java.util.stream.Stream;
+
+public class StringWithNoDuplicates {
+
+	public static void main(String[] args) {
+		
+		String input = "aabbccdefsafa";	
+		removeDuplicates(input);
+		
+	}
+	
+	static void removeDuplicates(String input)
+	{
+		int initialCount = 1;
+		int noDup = 1;
+		String NoDuplicateArray[noDup];
+		char temp[] = input.toCharArray();
+		Arrays.sort(temp); 
+		/*This is void, hence this is converted again back into string and converted back into char array*/
+		                     
+		input = new String(temp);
+		char sorted_arr[] = input.toCharArray();
+		
+		while (initialCount != sorted_arr.length)
+		{
+			
+		}
+	}
+}
